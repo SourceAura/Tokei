@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.73be730d55cb9b1aedf612b8202d76a9.js"
+  "/precache-manifest.f615c171dc3526bf30a34124c759c5a9.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "tokei"});

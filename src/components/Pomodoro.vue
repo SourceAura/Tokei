@@ -1,52 +1,46 @@
 <template>
-  <section id="app" class="hero is-info is-fullheight is-bold">
-    <div class="hero-body">
-      <div class="container has-text-centered">
-        <h2 class="title is-6">{{ title }}</h2>
-
-        <div id="timer">
-          <span id="minutes">{{ minutes }}</span>
-          <span id="middle">:</span>
-          <span id="seconds">{{ seconds }}</span>
-        </div>
-
-        <div id="buttons">
-          <!-- Start TImer -->
-          <vs-button
-            v-if="!timer"
-            type="line"
-            @click="startTimer"
-            class="btn"
-            color=""
-          >
-            <vs-icon size="small" icon="play_circle_outline" color=""></vs-icon>
-          </vs-button>
-
-          <!-- Pause Timer -->
-          <vs-button
-            v-if="timer"
-            type="line"
-            @click="stopTimer"
-            class="btn"
-            color=""
-          >
-            <vs-icon
-              size="small"
-              icon="pause_circle_outline"
-              color=""
-            ></vs-icon>
-          </vs-button>
-          <!--     Restart Timer -->
-          <vs-button
-            v-if="resetButton"
-            type="line"
-            @click="resetTimer"
-            class="btn"
-            color=""
-          >
-            <vs-icon size="small" icon="undo" color=""></vs-icon>
-          </vs-button>
-        </div>
+  <section id="app" class="app">
+    <div class="container">
+      <!-- hint -->
+      <h2 class="hint">{{ title }}</h2>
+      <!-- timer -->
+      <div id="timer">
+        <span id="minutes">{{ minutes }}</span>
+        <span id="middle">:</span>
+        <span id="seconds">{{ seconds }}</span>
+      </div>
+      <!-- controls -->
+      <div id="btns">
+        <!-- Start TImer -->
+        <vs-button
+          v-if="!timer"
+          type="line"
+          @click="startTimer"
+          class="btn"
+          color=""
+        >
+          <vs-icon size="small" icon="play_circle_outline" color=""></vs-icon>
+        </vs-button>
+        <!-- Pause Timer -->
+        <vs-button
+          v-if="timer"
+          type="line"
+          @click="stopTimer"
+          class="btn"
+          color=""
+        >
+          <vs-icon size="small" icon="pause_circle_outline" color=""></vs-icon>
+        </vs-button>
+        <!-- Restart Timer -->
+        <vs-button
+          v-if="resetButton"
+          type="line"
+          @click="resetTimer"
+          class="btn"
+          color=""
+        >
+          <vs-icon size="small" icon="undo" color=""></vs-icon>
+        </vs-button>
       </div>
     </div>
   </section>
@@ -54,7 +48,6 @@
 
 <script>
 import moment from "moment";
-
 moment.locale("en");
 
 export default {
@@ -67,7 +60,7 @@ export default {
   data() {
     return {
       timer: null,
-      totalTime: 25 * 60,
+      totalTime: 13 * 60,
       resetButton: false,
       title: "...one step at a time."
     };
@@ -86,7 +79,7 @@ export default {
       this.title = "...remember, not to forget.";
     },
     resetTimer: function() {
-      this.totalTime = 25 * 60;
+      this.totalTime = 13 * 60;
       clearInterval(this.timer);
       this.timer = null;
       this.resetButton = false;
@@ -121,15 +114,20 @@ export default {
 <style lang="css">
 @import url(https://fonts.googleapis.com/css?family=Dosis);
 
+.btn {
+  padding-top: 13px;
+  border-radius: 73px;
+  color: whitesmoke;
+  background-color: rgb(255, 159, 15 0.9);
+}
+#timer {
+  line-height: 1;
+  font-size: 200px;
+  margin-bottom: 40px;
+}
 #message {
   color: #ddd;
   font-size: 50px;
   margin-bottom: 20px;
-}
-
-#timer {
-  font-size: 200px;
-  line-height: 1;
-  margin-bottom: 40px;
 }
 </style>
