@@ -4,9 +4,10 @@
       <router-link to="/">
         <vs-icon icon="home" size="small" color="#FFF"></vs-icon>
       </router-link>
-      |
+      
       <div></div>
-      <router-link to="/about">About</router-link>
+      <router-link to="/about">
+      <vs-icon icon="info" size="small" color="#FFF"></vs-icon></router-link>
     </div>
     <router-view />
   </div>

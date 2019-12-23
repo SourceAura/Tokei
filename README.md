@@ -1,6 +1,7 @@
 # Tokei - A Multi-Clock
 
 > A Multi-Clock. Built with Vue.js x Vuesax.
+- this clock is yet another suggested project i figured i'd try and tackle in my free time. ideally i'll use it myself as i work and study more.
 
 > 2nd in a series of practice projects. 
 

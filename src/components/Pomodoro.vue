@@ -11,33 +11,40 @@
         </div>
 
         <div id="buttons">
-          <!--     Start TImer -->
-          <vs-button radius color="#000" type="gradient" 
-            id="start"
-            class=""
+          <!-- Start TImer -->
+          <vs-button
             v-if="!timer"
+            type="line"
             @click="startTimer"
+            class="btn"
+            color=""
           >
-            <vs-icon  icon="play_circle_outline" color="#124"></vs-icon>
-
+            <vs-icon size="small" icon="play_circle_outline" color=""></vs-icon>
           </vs-button>
-          <!--     Pause Timer -->
-          <vs-button radius color="#fff" type="gradient" 
-            id="stop"
-            class=""
+
+          <!-- Pause Timer -->
+          <vs-button
             v-if="timer"
+            type="line"
             @click="stopTimer"
+            class="btn"
+            color=""
           >
-            <vs-icon icon="pause_circle_outline" color="#124"></vs-icon>
+            <vs-icon
+              size="small"
+              icon="pause_circle_outline"
+              color=""
+            ></vs-icon>
           </vs-button>
           <!--     Restart Timer -->
-          <vs-button radius color="#000" type="gradient" 
-            id="reset"
-            class=""
+          <vs-button
             v-if="resetButton"
+            type="line"
             @click="resetTimer"
+            class="btn"
+            color=""
           >
-            <vs-icon icon="undo" color="#124"></vs-icon>
+            <vs-icon size="small" icon="undo" color=""></vs-icon>
           </vs-button>
         </div>
       </div>
@@ -59,11 +66,10 @@ export default {
   // ========================
   data() {
     return {
-      
       timer: null,
       totalTime: 25 * 60,
       resetButton: false,
-      title: "Let the countdown begin!!"
+      title: "...one step at a time."
     };
   },
   // ========================
@@ -71,30 +77,30 @@ export default {
     startTimer: function() {
       this.timer = setInterval(() => this.countdown(), 1000);
       this.resetButton = true;
-      this.title = "Greatness is within sight!!"
+      this.title = "...focus.";
     },
     stopTimer: function() {
       clearInterval(this.timer);
       this.timer = null;
       this.resetButton = true;
-      this.title = "Never quit, keep going!!"
+      this.title = "...remember, not to forget.";
     },
     resetTimer: function() {
-      this.totalTime = (25 * 60);
+      this.totalTime = 25 * 60;
       clearInterval(this.timer);
       this.timer = null;
       this.resetButton = false;
-      this.title = "Let the countdown begin!!"
+      this.title = "...";
     },
     padTime: function(time) {
-      return (time < 10 ? '0' : '') + time;
+      return (time < 10 ? "0" : "") + time;
     },
     countdown: function() {
-      if(this.totalTime >= 1){
+      if (this.totalTime >= 1) {
         this.totalTime--;
-      } else{
+      } else {
         this.totalTime = 0;
-        this.resetTimer()
+        this.resetTimer();
       }
     }
   },
@@ -105,7 +111,7 @@ export default {
       return this.padTime(minutes);
     },
     seconds: function() {
-      const seconds = this.totalTime - (this.minutes * 60);
+      const seconds = this.totalTime - this.minutes * 60;
       return this.padTime(seconds);
     }
   }
