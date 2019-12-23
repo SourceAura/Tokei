@@ -8,12 +8,24 @@
   </div>
 </template>
 
-<style lang="stylus">
-#app
-  font-family 'Avenir', Helvetica, Arial, sans-serif
-  -webkit-font-smoothing antialiased
-  -moz-osx-font-smoothing grayscale
-  text-align center
-  color #2c3e50
-  margin-top 60px
+
+
+<style lang="css" global>
+@import url(https://fonts.googleapis.com/css?family=Dosis);
+
+#app {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center !important;
+  color: whitesmoke;
+  margin-top: 60px;
+  font-family: "Dosis", cursive !important;
+
+}
+body {
+  background: #e69620;
+  background: radial-gradient(ellipse at center, #1A0317 0%, #000000 70%);
+  background-size: 100%;
+}
 </style>
+
