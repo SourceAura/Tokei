@@ -1,10 +1,10 @@
 <template>
   <div class="home">
-    <div></div>
+    <div class="container"></div>
     <!-- brand logo here later -->
-    <img alt="Vue logo" src="../assets/logo.png" />
+    <!-- <img alt="Vue logo" src="../assets/logo.png" /> -->
     
-    <vs-tabs value='1' alignment="center">
+    <vs-tabs class="container" value='1' alignment="center">
       <vs-tab label="Alarms:">
         <div>
           <Alarm msg="" />
@@ -44,5 +44,8 @@ export default {
 <style lang="css">
   body {
     text-align:center;
+  }
+  .container {
+    margin-top: 40px;
   }
 </style>
