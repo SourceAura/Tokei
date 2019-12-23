@@ -8,14 +8,14 @@
 ### What's it do? - To-Do
 
 - [x] Digital Display
-- [x] Pomodoro 
+- [x] Pomodoro - might add congrats.
 - [ ] Alarms maybe??
-- [ ] Complete Responsivity - To bes tested...
+- [ ] Complete Responsivity - To be tested.
 
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/1e89f57c-185a-45e3-a537-646d97b9a10e/deploy-status)](https://app.netlify.com/sites/dentaku/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/237cf08f-b1e8-4789-843e-89a0a3506ca3/deploy-status)](https://app.netlify.com/sites/tokei/deploys)
 
-[Link to Project](https://dentaku.netlify.com)
+[Link to Project](https://tokei.netlify.com)
 
 
 ## Build Setup
